@@ -60,43 +60,16 @@ Copyright: 2015-2026 MinIO, Inc.
 atulkrishnathakur@atul-pc:~$ 
 
 ```
-   
-# set the below configuration 
-1. run the command
-   ```
-      atulkrishnathakur@atul-pc:~/Downloads$ sudo vi /etc/default/minio
-   ```
-2. change or add the configuration
+
+# create directory for storage
 ```
-## Volume to be used for MinIO server.
-##
- MINIO_VOLUMES="/home/atulkrishnathakur/minios3data"
+atulkrishnathakur@atul-pc:~$ sudo mkdir /mnt/minios3data
+```
 
-## Use if you want to run MinIO on a custom port.
-## add --address and --console-address to MINIO_OPTS:
-# MINIO_OPTS="--address :9000 --console-address :9001 [OTHER_PARAMS]"
-#
-MINIO_OPTS="--address :9000 --console-address :9001"
-
-
-## Root User credentials (Required for MinIO to start)
-MINIO_ROOT_USER="minioadmin"
-MINIO_ROOT_PASSWORD="minioadmin"
-
-## Point to the main configuration file
-# MINIO_CONFIG_ENV_FILE=/etc/minio/config.env
+# change the permission
+```
+atulkrishnathakur@atul-pc:~$ sudo chmod u+rxw /mnt/ /usr/local/bin/minio
+atulkrishnathakur@atul-pc:~$ sudo chown -R minio-user /mnt/ /usr/local/bin/minio
 
 ```
 
-# Create the directory
-```
-atulkrishnathakur@atul-pc:~/Downloads$ sudo mkdir /mnt/minios3data
-```
-
-
-# Run below command for ownership and permission
-```
-atulkrishnathakur@atul-pc:~/Downloads$ sudo chmod u+rxw /mnt/ /usr/local/bin/minio
-atulkrishnathakur@atul-pc:~/Downloads$ sudo chown -R minio-user /mnt/ /usr/local/bin/minio
-
-```
