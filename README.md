@@ -106,7 +106,7 @@ MINIO_OPTS="--address :9000 --console-address :9001"
 
 MINIO_ROOT_USER="minioadmin"
 
-MINIO_ROOT_PASSWORD="minioadmin"
+MINIO_ROOT_PASSWORD="*******"
 
 ## Point to the main configuration file
 MINIO_CONFIG_ENV_FILE=/etc/minio/config.env
