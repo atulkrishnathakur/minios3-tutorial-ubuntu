@@ -1,3 +1,6 @@
+#url references
+1. url https://docs.min.io/aistor/installation/linux/install/deploy-aistor-on-ubuntu-server/
+
 # Download and install
 1. Run the below command
 ```
