@@ -112,6 +112,8 @@ MINIO_CONFIG_ENV_FILE=/etc/minio/config.env
 2. enable the minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl enable minio`
 3. start the minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl start minio`
 4. check the status of minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl status minio`
-
+5. Default user id minioadmin and password is minioadmin
+6. Open then http://localhost:9001 in browser to create bucket
+7. Use http://localhost:9000 in source code
 
 
