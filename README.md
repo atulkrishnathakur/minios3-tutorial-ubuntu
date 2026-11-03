@@ -1,18 +1,16 @@
-# Download minio s3 for ubuntu
-1. open url https://dl.min.io/aistor/minio/release/linux-amd64/
-2. click on minio.deb file
-
-# install minios3
-1. go to Downloads by `cd ~/Downloads`
-2. Run the command `sudo dpkg -i minio.deb`
+# Download and install
+1. Run the below command
+```
+atulkrishnathakur@atul-pc:~$ curl --progress-bar -L dl.min.io/aistor/minio/release/linux-amd64/minio.deb -o minio.deb
+sudo dpkg -i minio.deb
+```
 
 
 ```
-[sudo] password for atulkrishnathakur: 
-Selecting previously unselected package aistor.
-(Reading database… 234432 files and directories currently installed.)
+################################################################################################################################################################################# 100.0%################################################################################################################################################################################# 100.0%
+(Reading database… 234437 files and directories currently installed.)
 Preparing to unpack minio.deb…
-Unpacking aistor (20260919170525.0.0)…
+Unpacking aistor (20260919170525.0.0) over (20260919170525.0.0)…
 Setting up aistor (20260919170525.0.0)…
 
 ================================================================================
@@ -49,6 +47,7 @@ Setting up aistor (20260919170525.0.0)…
   Documentation: https://docs.min.io/aistor/installation/linux/
 
 ================================================================================
+
 ```
    
 # set the below configuration 
@@ -78,8 +77,15 @@ MINIO_ROOT_PASSWORD="minioadmin"
 
 ```
 
-# Run below command for permission
+# Create the directory
 ```
-atulkrishnathakur@atul-pc:~/Downloads$ sudo chown -R minio-user:minio-user /home/atulkrishnathakur/minios3data
+atulkrishnathakur@atul-pc:~/Downloads$ sudo mkdir /mnt/minios3data
+```
+
+
+# Run below command for ownership and permission
+```
+atulkrishnathakur@atul-pc:~/Downloads$ sudo chmod u+rxw /mnt/ /usr/local/bin/minio
+atulkrishnathakur@atul-pc:~/Downloads$ sudo chown -R minio-user /mnt/ /usr/local/bin/minio
 
 ```
