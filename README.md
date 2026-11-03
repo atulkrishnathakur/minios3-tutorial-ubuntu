@@ -51,4 +51,35 @@ Setting up aistor (20260919170525.0.0)…
 ================================================================================
 ```
    
+# set the below configuration 
+1. run the command
+   ```
+      atulkrishnathakur@atul-pc:~/Downloads$ sudo vi /etc/default/minio
+   ```
+2. change or add the configuration
+```
+## Volume to be used for MinIO server.
+##
+ MINIO_VOLUMES="/home/atulkrishnathakur/minios3data"
 
+## Use if you want to run MinIO on a custom port.
+## add --address and --console-address to MINIO_OPTS:
+# MINIO_OPTS="--address :9000 --console-address :9001 [OTHER_PARAMS]"
+#
+MINIO_OPTS="--address :9000 --console-address :9001"
+
+
+## Root User credentials (Required for MinIO to start)
+MINIO_ROOT_USER="minioadmin"
+MINIO_ROOT_PASSWORD="minioadmin"
+
+## Point to the main configuration file
+# MINIO_CONFIG_ENV_FILE=/etc/minio/config.env
+
+```
+
+# Run below command for permission
+```
+atulkrishnathakur@atul-pc:~/Downloads$ sudo chown -R minio-user:minio-user /home/atulkrishnathakur/minios3data
+
+```
