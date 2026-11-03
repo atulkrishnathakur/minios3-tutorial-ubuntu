@@ -49,6 +49,17 @@ Setting up aistor (20260919170525.0.0)…
 ================================================================================
 
 ```
+
+# check the minio version
+```
+atulkrishnathakur@atul-pc:~$ minio --version
+minio version RELEASE.2026-09-19T17-05-25Z (commit-id=cea38c7e83d1ebafea7b9b5d1be53878deaa9772)
+Runtime: go1.26.6 linux/amd64
+License: MinIO AIStor License
+Copyright: 2015-2026 MinIO, Inc.
+atulkrishnathakur@atul-pc:~$ 
+
+```
    
 # set the below configuration 
 1. run the command
