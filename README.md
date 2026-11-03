@@ -73,3 +73,31 @@ atulkrishnathakur@atul-pc:~$ sudo chown -R minio-user /mnt/ /usr/local/bin/minio
 
 ```
 
+# run below command for configuration
+1. command: `atulkrishnathakur@atul-pc:~$ sudo vi /etc/default/minio`
+
+```
+## Volume to be used for MinIO server.
+##
+# MINIO_VOLUMES="http://node{1...4}/mnt/data{1...4}"
+MINIO_VOLUMES="/mnt/minios3data"
+
+## Use if you want to run MinIO on a custom port.
+## add --address and --console-address to MINIO_OPTS:
+# MINIO_OPTS="--address :9000 --console-address :9001 [OTHER_PARAMS]"
+#
+# MINIO_OPTS="-S /etc/minio/certs/"
+MINIO_OPTS="--address :9000 --console-address :9001"
+
+MINIO_ROOT_USER="minioadmin"
+
+MINIO_ROOT_PASSWORD="minioadmin"
+
+## Point to the main configuration file
+MINIO_CONFIG_ENV_FILE=/etc/minio/config.env
+```
+2. enable the minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl enable minio`
+3. start the minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl start minio`
+4. check the status of minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl status minio`
+
+
