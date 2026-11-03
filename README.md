@@ -73,6 +73,16 @@ atulkrishnathakur@atul-pc:~$ sudo chown -R minio-user /mnt/ /usr/local/bin/minio
 
 ```
 
+# Set the licence
+1. create free account `https://www.min.io/pricing`
+2. Run the bellow command
+   ```
+   sudo mkdir /opt/minio
+   sudo touch /opt/minio/minio.license
+   sudo chown -R minio-user:minio-user /opt/minio
+   ```
+3. open the `/opt/minio/minio.license` file and paste licence string in file
+
 # run below command for configuration
 1. command: `atulkrishnathakur@atul-pc:~$ sudo vi /etc/default/minio`
 
@@ -104,12 +114,4 @@ MINIO_CONFIG_ENV_FILE=/etc/minio/config.env
 4. check the status of minio. command is `atulkrishnathakur@atul-pc:~$ sudo systemctl status minio`
 
 
-# Set the licence
-1. create free account `https://www.min.io/pricing`
-2. Run the bellow command
-   ```
-   sudo mkdir /opt/minio
-   sudo touch /opt/minio/minio.license
-   sudo chown -R minio-user:minio-user /opt/minio
-   ```
-3. open the `/opt/minio/minio.license` file and paste licence string in file
+
