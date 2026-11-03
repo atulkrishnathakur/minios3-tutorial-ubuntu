@@ -5,7 +5,9 @@
 # install minios3
 1. go to Downloads by `cd ~/Downloads`
 2. Run the command `sudo dpkg -i minio.deb`
-   ```
+
+
+```
 [sudo] password for atulkrishnathakur: 
 Selecting previously unselected package aistor.
 (Reading database… 234432 files and directories currently installed.)
